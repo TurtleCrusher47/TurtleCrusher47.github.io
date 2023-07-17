@@ -4,25 +4,37 @@
     src: url(../fonts/JetBrainsMono-Regular.woff2);
 }
 
-* {
+/* To make the scrolling of the nav bar smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 16px;
     font-family: JetBrains Mono;
+    --color-primary: #FDFFF1;
+    --color-background: #1C1C1C;
+    --color-header: color: #EB467B;
 }
 
 body {
-    color: #CED5E5;
-    background-color: #000000;
+    color: var(--color-primary, #FDFFF1);
+    background-color: var(--color-background, #1C1C1C);
+}
+
+main {
+    margin-left: 8rem;
+}
+
+nav {
+    
 }
 
 h3 {
     color: #EB467B;
 }
 
-/* To make the scrolling of the nav bar smooth */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Changing the scrollbar */
+/* #region scrollbar */
 body::-webkit-scrollbar {
     width: 0.25rem;
   }
@@ -32,5 +44,54 @@ body::-webkit-scrollbar-track {
 }
   
 body::-webkit-scrollbar-thumb {
-    background: #FFFFFF;
+    background: #AAAAAA;
+}
+/* #endregion */
+
+.navbar {
+    width: 6rem;
+    height: 100vh;
+    position: fixed;
+    background-color: #171515;
+    transition: width 300ms ease;
+}
+
+.navbar:hover {
+    width: 15rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.link-text {
+    display:none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    min-width: 3rem;
+    margin: 0 1.5rem 0 1.5rem;
 }
