@@ -1,0 +1,36 @@
+/* Font */
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url(../fonts/JetBrainsMono-Regular.woff2);
+}
+
+* {
+    font-family: JetBrains Mono;
+}
+
+body {
+    color: #CED5E5;
+    background-color: #000000;
+}
+
+h3 {
+    color: #EB467B;
+}
+
+/* To make the scrolling of the nav bar smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Changing the scrollbar */
+body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+body::-webkit-scrollbar-track {
+    background: #1E2127;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+}
