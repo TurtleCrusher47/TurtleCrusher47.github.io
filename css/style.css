@@ -129,7 +129,7 @@ body::-webkit-scrollbar-thumb {
         height: 100vh;
         position: fixed;
         background-color: var(--color-navbar);
-        transition: width 300ms ease;
+        transition: width 500ms ease;
     }
     
     .navbar:hover {
@@ -165,6 +165,8 @@ body::-webkit-scrollbar-thumb {
     .link-text {
         display:none;
         margin-left: 1rem;
+        animation-name: link-text-anim;
+        animation-duration: 200ms;
     }
     
     .nav-link svg {
@@ -183,7 +185,6 @@ body::-webkit-scrollbar-thumb {
         width: 100vw;
         height: 8rem;
         background-color: var(--color-navbar);
-        transition: height 500ms ease;
     }
     
     .navbar-nav {
@@ -215,8 +216,6 @@ body::-webkit-scrollbar-thumb {
         margin-top: 0.5rem 0 0 0;
         font-size: 20px;
         color: var(--color-primary);
-        animation-name: link-text-anim;
-        animation-duration: 200ms;
     }
     
     .nav-link svg {
