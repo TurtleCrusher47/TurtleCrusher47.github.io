@@ -11,7 +11,7 @@ html {
 
 /* setting color variables that will be reused */
 :root {
-    font-family: JetBrains Mono;
+    font-family: "JetBrains Mono";
     --color-primary: #FDFFF1;
     --color-background: #05080A;
     --color-header: #EB467B;
@@ -171,13 +171,13 @@ body::-webkit-scrollbar {
     width: 0.25rem;
   }
   
-body::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track {
     background: #1E2127;
-}
+  }
   
-body::-webkit-scrollbar-thumb {
-    background: #AAAAAA;
-}
+  body::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+  }
 /* #endregion */
 
 
@@ -344,7 +344,7 @@ body::-webkit-scrollbar-thumb {
     /* text made visible from the start as there is no hover for mobile */
     .link-text {
         display: block;
-        margin-top: 0.5rem 0 0 0;
+        margin-top: 0.5rem;
         font-size: 1.1rem;
         color: var(--color-primary);
     }
