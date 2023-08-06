@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li data-tab-target="#History" class="nav-item">
                 <a href="#History" class="nav-link">
                     <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 7C7 6.44772 7.44772 6 8 6H16C16.5523 6 17 6.44772 17 7C17 7.55228 16.5523 8 16 8H8C7.44772 8 7 7.55228 7 7Z" fill="#FFFFFF"/>
@@ -23,14 +23,14 @@
                     <span class="link-text">History</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li data-tab-target="#Iconic-Cards" class="nav-item">
                 <a href="#Iconic-Cards" class="nav-link">
                     <svg width="40px" height="40px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M256 640v192h640V384H768v-64h150.976c14.272 0 19.456 1.472 24.64 4.288a29.056 29.056 0 0 1 12.16 12.096c2.752 5.184 4.224 10.368 4.224 24.64v493.952c0 14.272-1.472 19.456-4.288 24.64a29.056 29.056 0 0 1-12.096 12.16c-5.184 2.752-10.368 4.224-24.64 4.224H233.024c-14.272 0-19.456-1.472-24.64-4.288a29.056 29.056 0 0 1-12.16-12.096c-2.688-5.184-4.224-10.368-4.224-24.576V640h64z"/><path fill="#FFFFFF" d="M768 192H128v448h640V192zm64-22.976v493.952c0 14.272-1.472 19.456-4.288 24.64a29.056 29.056 0 0 1-12.096 12.16c-5.184 2.752-10.368 4.224-24.64 4.224H105.024c-14.272 0-19.456-1.472-24.64-4.288a29.056 29.056 0 0 1-12.16-12.096C65.536 682.432 64 677.248 64 663.04V169.024c0-14.272 1.472-19.456 4.288-24.64a29.056 29.056 0 0 1 12.096-12.16C85.568 129.536 90.752 128 104.96 128h685.952c14.272 0 19.456 1.472 24.64 4.288a29.056 29.056 0 0 1 12.16 12.096c2.752 5.184 4.224 10.368 4.224 24.64z"/><path fill="#FFFFFF" d="M448 576a160 160 0 1 1 0-320 160 160 0 0 1 0 320zm0-64a96 96 0 1 0 0-192 96 96 0 0 0 0 192z"/></svg>
                     <span class="link-text">Cards</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="#Card-Game" class="nav-link">
+            <li data-tab-target="#Game" class="nav-item">
+                <a href="#Game" class="nav-link">
                     <svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -4719.000000)" fill="#000000">
@@ -48,133 +48,165 @@
     </nav>
     
     <main>
-        <h3 id="History">A Brief History On Vintage Cards</h3>
-        <div class="text-container">
-            <div class="text-box">
-                <h4>Wizards of the Coast</h4>
-                </div>
-                <p>
-                    First, there was the WOTC (Wizards of the Coast) era, 
-                    when cards were manufactured by Wizards of the Coast.
-                    Sets released in this era include Base Set, Jungle,
-                    Fossil, Team Rocket, and all Gym and Neo sets.
-                    While WOTC did manufacture a couple e-series sets, 
-                    the card design did change and therefore the e-series 
-                    is usually considered a separate era. Highlights of the 
-                    WOTC era include 1st Edition Base Set of course, the 
-                    Neo Shinings, and fantastic artwork and nostalgic card 
-                    design all around.
-                </p>
-                <section aria-label="WOTC Cards" class="WOTC-carousel">
-                    <!-- carousel of images -->
-                    <div class="carousel" data-carousel>
-                        <!-- html entity -->
-                        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-                        <ul data-slides>
-                            <li class="slide" data-active>
-                                <img src="images/snorlaxjungle.jpg" alt="snorlax">
-                            </li>
-                            <li class="slide">
-                                <img src="images/vaporeonjungle.jpg" alt="vaporeon">
-                            </li>
-                            <li class="slide">
-                                <img src="images/darkgengar.jpg" alt="dark gengar">
-                            </li>
-                        </ul>
+        <div class="tab-content">
+            <div id="History" data-tab-content>
+                <h3 id="History">A Brief History On Vintage Cards</h3>
+                <div class="text-container">
+                    <div class="text-box">
+                        <h4>Wizards of the Coast</h4>
+                        </div>
+                        <p>
+                            First, there was the WOTC (Wizards of the Coast) era, 
+                            when cards were manufactured by Wizards of the Coast.
+                            Sets released in this era include Base Set, Jungle,
+                            Fossil, Team Rocket, and all Gym and Neo sets.
+                            While WOTC did manufacture a couple e-series sets, 
+                            the card design did change and therefore the e-series 
+                            is usually considered a separate era. Highlights of the 
+                            WOTC era include 1st Edition Base Set of course, the 
+                            Neo Shinings, and fantastic artwork and nostalgic card 
+                            design all around.
+                        </p>
+                        <section aria-label="WOTC Cards" class="WOTC-carousel">
+                            <!-- carousel of images -->
+                            <div class="carousel" data-carousel>
+                                <!-- html entity -->
+                                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                                <ul data-slides>
+                                    <li class="slide" data-active>
+                                        <img src="images/snorlaxjungle.jpg" alt="snorlax">
+                                    </li>
+                                    <li class="slide">
+                                        <img src="images/vaporeonjungle.jpg" alt="vaporeon">
+                                    </li>
+                                    <li class="slide">
+                                        <img src="images/darkgengar.jpg" alt="dark gengar">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
                     </div>
-                </section>
-            </div>
 
-            <div class="container reveal fade-bottom">
-                <h4>E-Series</h4>
-                <p>
-                    The e-series era introduced scannable cards if you had an
-                    e-reader for your Game Boy Advance. This era of cards us usually 
-                    hit or miss with collectors, as many loved the beautiful artwork, 
-                    but were discouraged by literal barcodes on all cards
-                    except holos. The e-series includes the famed Crystal cards,
-                    with Crystal Charizard, Lugia, Ho-Oh, and Celebi being 
-                    highlights.
-                </p>
-            </div>
-            
-            <div class="container reveal fade-bottom">
-                <h4>EX series</h4>
-                <p>
-                    The e-series era blended into the EX series era in what 
-                    is generally considered to be the time when the Pokemon TCG 
-                    was least popular, from around 2003-2007. However, this does 
-                    not equate to a dropoff in card quality. The EX series 
-                    introduced Pokemon-ex, more powerful versions of regular 
-                    Pokemon. The cards included full holographic borders and 
-                    artwork, and followed up the Crystals and Neo Shinings as 
-                    true Ultra Rare cards, usually being 2-3 per booster box. 
-                    Later EX Series sets included Gold Star cards, which featured 
-                    Shiny Pokemon and were the first cards to show Pokemon 
-                    breaking out of the artwork box. These Gold Star cards 
-                    were incredibly difficult to pull, with one coming in every 
-                    two to three booster boxes. The EX Series was the longest era 
-                    to date, spanning four full years and including 16 distinct 
-                    English sets.
-                </p>
-            </div>
-        </div>
-
-        <!-- Iconic Cards -->
-        <h3 id="Iconic-Cards">Iconic Cards</h3>
-        <div class="text-container">
-            <div class="text-box">
-                <!-- Pikachu Illustrator -->
-                <h4>Pikachu Illustrator</h4>
-                <p>
-                    The rarest and most expensive pokemon card ever sold was the 1998
-                    Japanese Promo Pikachu Illustrator. This card was sold for $5.3 million
-                    in July 2021 to the influencer Logan Paul.
-                </p>
-                
-                <p>
-                    The reason this card is worth so much is because there are only 39 copies
-                    known to be in existence as it was only given out to winners of a pokemon card
-                    designing competition in the late 90's.
-                </p>
+                    <div class="container reveal fade-bottom">
+                        <h4>E-Series</h4>
+                        <p>
+                            The e-series era introduced scannable cards if you had an
+                            e-reader for your Game Boy Advance. This era of cards us usually 
+                            hit or miss with collectors, as many loved the beautiful artwork, 
+                            but were discouraged by literal barcodes on all cards
+                            except holos. The e-series includes the famed Crystal cards,
+                            with Crystal Charizard, Lugia, Ho-Oh, and Celebi being 
+                            highlights.
+                        </p>
+                        <img src="images/snorlaxeseries.jpg" alt="snorlax" class="images">
+                    </div>
+                    
+                    <div class="container reveal fade-bottom">
+                        <h4>EX series</h4>
+                        <p>
+                            The e-series era blended into the EX series era in what 
+                            is generally considered to be the time when the Pokemon TCG 
+                            was least popular, from around 2003-2007. However, this does 
+                            not equate to a dropoff in card quality. The EX series 
+                            introduced Pokemon-ex, more powerful versions of regular 
+                            Pokemon. The cards included full holographic borders and 
+                            artwork, and followed up the Crystals and Neo Shinings as 
+                            true Ultra Rare cards, usually being 2-3 per booster box. 
+                            Later EX Series sets included Gold Star cards, which featured 
+                            Shiny Pokemon and were the first cards to show Pokemon 
+                            breaking out of the artwork box. These Gold Star cards 
+                            were incredibly difficult to pull, with one coming in every 
+                            two to three booster boxes. The EX Series was the longest era 
+                            to date, spanning four full years and including 16 distinct 
+                            English sets.
+                        </p>
+                        <img src="images/rayquazaex.jpg" alt="rayquaza" class="images">
+                    </div>
                 </div>
-
-            <div class="text-box">
-                <!-- First Edition Base Set Shadowless Charizard -->
-                <h4>First Edition Charizard</h4>
-                <p>
-                    The most well known pokemon card of all time would be the 1st Edition
-                    Shadowless Charizard.
-                </p>
-
-                <p>
-                    Featuring one of the most loved and well known pokemon of all time,
-                    the card is worth around $36 thousand at mint condition.
-                </p>
             </div>
 
-            <div class="text-box">
-                <!-- Shaymin EX -->
-                <h4>Shaymin EX</h4>
-                <p>
-                    The last card I will talk about is iconic not because of its rarity or price,
-                    but because of how big of an impact it made to the trading card game.
-                </p>
+            <div id="Iconic-Cards" data-tab-content>
+                <!-- Iconic Cards -->
+                <h3 id="Iconic-Cards">Iconic Cards</h3>
+                    <div class="container reveal fade-bottom">
+                        <!-- Pikachu Illustrator -->
+                        <h4>Pikachu Illustrator</h4>
+                        <p>
+                            The rarest and most expensive pokemon card ever sold was the 1998
+                            Japanese Promo Pikachu Illustrator. This card was sold for $5.3 million
+                            in July 2021 to the influencer Logan Paul.
+                        </p>
 
-                <p>
-                    The card was released during the roaring skies era and allowed players to fill
-                    their hand with up till six cards when played.
-                </p>
+                        <img src="images/illustratorpikachu.jpg" alt="illustrator pikachu" class="images">
+                        
+                        <p>
+                            The reason this card is worth so much is because there are only 39 copies
+                            known to be in existence as it was only given out to winners of a pokemon card
+                            designing competition in the late 90's.
+                        </p>
+                    </div>
+
+                    <div class="container reveal fade-bottom">
+                        <!-- First Edition Base Set Shadowless Charizard -->
+                        <h4>First Edition Charizard</h4>
+                        <p>
+                            The most well known pokemon card of all time would be the 1st Edition
+                            Shadowless Charizard.
+                        </p>
+
+                        <img src="images/charizardbase.jpg" alt="charizard" class="images">
+
+                        <p>
+                            Featuring one of the most loved and well known pokemon of all time,
+                            the card is worth around $36 thousand at mint condition.
+                        </p>
+                    </div>
+
+                    <div class="container reveal fade-bottom">
+                        <!-- Shaymin EX -->
+                        <h4>Shaymin EX</h4>
+                        <p>
+                            The last card I will talk about is iconic not because of its rarity or price,
+                            but because of how big of an impact it made to the trading card game.
+                        </p>
+
+                        <img src="images/shayminex.jpg" alt="shaymin ex" class="images">
+
+                        <p>
+                            The card was released during the roaring skies era and allowed players to fill
+                            their hand with up till six cards when played.
+                        </p>
+                    </div>
             </div>
-        </div>
 
-        <div class="text-box">
-        <h3 id="Card-Game"></h3>
-        <p>
+            <div id="Game" data-tab-content>
+                <h3 id="Game">Card Game</h3>
+                <div class="container reveal fade-bottom">
+                    <h4>Tournaments</h4>
+                    <p>
+                        The popularity of the TCG has led to the creation of competitive leagues and tournaments.
+                        The Pokemon World Championships is an annual event that brings together the
+                        best players from around the world to compete for the title of World Champion.
+                        The event has been held annually since 2004 and features both the video game
+                        and TCG competitions.
+                    </p>
 
-        </p>
-        </div>
+                    <img src="images/tournament.png" alt="tournament" class="images">
+                </div>
+                <div class="container reveal fade-bottom">
+                    <h4>Digital Version</h4>
+                    <p>
+                        In addition to new card sets, the TCG also expanded into the digital realm with the
+                        release of the Pokemon Trading Card Game Online in 2011. This allowed players
+                        to play against each other in real-time matches and participate in online tournaments.
+                        The digital version also allowed for more frequent updates and releases of new card sets,
+                        further expanding the possibilities of the game.
+                    </p>
+
+                    <img src="images/ptcgo.png" alt="online game" class="images">
+                </div>
+            </div>
     </main>
 </body>
 

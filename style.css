@@ -48,10 +48,8 @@ h4 {
 }
 
 .images {
-  padding-top: 5vh;
-  display: flex;
-  gap: 3vw;
-  justify-content: space-evenly;
+    border: 6px solid #1497CA;
+    border-radius: 5px;
 }
 
 /* scroll animation */
@@ -67,14 +65,6 @@ h4 {
 
 .active.fade-bottom {
     animation: fade-bottom 1s ease-in;
-}
-
-.active.fade-left {
-    animation: fade-left 1s ease-in;
-}
-
-.active.fade-right {
-    animation: fade-right 1s ease-in;
 }
 
 /* carousel parent class */
@@ -156,34 +146,17 @@ h4 {
       opacity: 1;
     }
 }
-@keyframes fade-left {
-    0% {
-      transform: translateX(-100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-}
-@keyframes fade-right {
-    0% {
-      transform: translateX(100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+
+[data-tab-content]
+{
+    /*hide */
+    display: none;
 }
 
-/* .text-container {
-
+.active[data-tab-content]
+{
+    display: block;
 }
-
-.text-box {
-
-} */
 
 /* #region scrollbar */
 body::-webkit-scrollbar {
@@ -299,7 +272,7 @@ body::-webkit-scrollbar-thumb {
     }
     
     main {
-        margin-top: 1rem;
+        margin-top: 8rem;
     }
 
     nav {
