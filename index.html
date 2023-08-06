@@ -4,7 +4,7 @@
 <head>
     <title>title</title>
     <link rel="stylesheet" href="style.css"/>
-    <script src="javascript.js" defer ></script>
+    <script src="javascript.js" defer></script>
 
     <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,6 +52,7 @@
         <div class="text-container">
             <div class="text-box">
                 <h4>Wizards of the Coast</h4>
+                </div>
                 <p>
                     First, there was the WOTC (Wizards of the Coast) era, 
                     when cards were manufactured by Wizards of the Coast.
@@ -64,9 +65,28 @@
                     Neo Shinings, and fantastic artwork and nostalgic card 
                     design all around.
                 </p>
+                <section aria-label="WOTC Cards" class="WOTC-carousel">
+                    <!-- carousel of images -->
+                    <div class="carousel" data-carousel>
+                        <!-- html entity -->
+                        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                        <ul data-slides>
+                            <li class="slide" data-active>
+                                <img src="images/snorlaxjungle.jpg" alt="snorlax">
+                            </li>
+                            <li class="slide">
+                                <img src="images/vaporeonjungle.jpg" alt="vaporeon">
+                            </li>
+                            <li class="slide">
+                                <img src="images/darkgengar.jpg" alt="dark gengar">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
 
-            <div class="text-box">
+            <div class="container reveal fade-bottom">
                 <h4>E-Series</h4>
                 <p>
                     The e-series era introduced scannable cards if you had an
@@ -79,7 +99,7 @@
                 </p>
             </div>
             
-            <div class="text-box">
+            <div class="container reveal fade-bottom">
                 <h4>EX series</h4>
                 <p>
                     The e-series era blended into the EX series era in what 
