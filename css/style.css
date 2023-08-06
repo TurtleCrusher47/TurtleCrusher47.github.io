@@ -34,6 +34,68 @@ h4 {
     margin-bottom: 0;
 }
 
+/* scroll animation */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+@keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+@keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+.text-container {
+
+}
+
+.text-box {
+
+}
+
 /* #region scrollbar */
 body::-webkit-scrollbar {
     width: 0.25rem;
@@ -48,14 +110,16 @@ body::-webkit-scrollbar-thumb {
 }
 /* #endregion */
 
-@keyframes link-text-anim {
-    0% {color: var(--color-navbar);}
-    99% {color: var(--color-navbar);}
-    100% {color: var(--color-primary);}
-}
 
 /* For PC (only pc should have hover)*/
 @media screen and (min-width: 800px) {
+    /* #region adaptive */
+    @keyframes link-text-anim {
+        0% {color: var(--color-navbar);}
+        99% {color: var(--color-navbar);}
+        100% {color: var(--color-primary);}
+    }
+
     main {
         margin-left: 8rem;
     }
@@ -64,7 +128,7 @@ body::-webkit-scrollbar-thumb {
         width: 6rem;
         height: 100vh;
         position: fixed;
-        background-color: #171515;
+        background-color: var(--color-navbar);
         transition: width 300ms ease;
     }
     
@@ -117,7 +181,7 @@ body::-webkit-scrollbar-thumb {
     
     .navbar {
         width: 100vw;
-        height: 6rem;
+        height: 8rem;
         background-color: var(--color-navbar);
         transition: height 500ms ease;
     }
@@ -146,18 +210,8 @@ body::-webkit-scrollbar-thumb {
         text-decoration: none;
     }
 
-    /* expanding the nav bar when hovering it */
-    .navbar:hover {
-        height: 8rem;
-    }
-
-    /* making the text visible when hovering it */
-    .navbar:hover .link-text {
-        display: block;
-    }
-
     .link-text {
-        display: none;
+        display: block;
         margin-top: 0.5rem 0 0 0;
         font-size: 20px;
         color: var(--color-primary);
@@ -170,3 +224,4 @@ body::-webkit-scrollbar-thumb {
         margin: 1.5rem 0 1.5rem 0;
     }
 }
+/* #endregion */
