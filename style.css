@@ -9,6 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* setting color variables that will be reused */
 :root {
     font-family: JetBrains Mono;
     --color-primary: #FDFFF1;
@@ -17,20 +18,24 @@ html {
     --color-navbar: #171515;
 }
 
+/* setting the margin and padding to 0 as it is not by default */
 html, body{
     margin: 0px;
     padding: 0px;
 }
 
+/* removing any default text decoration */
 a {
     text-decoration: none;
 }
 
+/* removing any default list style */
 ul {
     list-style: none;
 }
 
-/* 1px invisible border to prevent margin collapsing */
+/* 1px invisible border to prevent margin collapsing and removing
+sideways scrollbar*/
 body {
     color: var(--color-primary, #FDFFF1);
     background-color: var(--color-background, #05080A);
@@ -44,7 +49,6 @@ h3 {
 
 h4 {
     color: #AE81D8;
-    margin-bottom: 0;
 }
 
 .images {
@@ -74,18 +78,22 @@ h4 {
     justify-content: center;
 }
 
+/* carousel unordered list margin and padding set to 0
+and removing any default list styling*/
 .carousel > ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* setting the width, height and position of the carousel */
 .carousel {
     width: 30vw;
     height: 50vh;
     position: relative;
 }
 
+/* setting the slides to be transparent at first */
 .slide {
     position: absolute;
     inset: 0;
@@ -96,6 +104,7 @@ h4 {
     border-radius: 5px;
 }
 
+/* setting the images to fill out the slide */
 .slide > img {
     display: block;
     width: 100%;
@@ -104,12 +113,14 @@ h4 {
     object-position: center;
 }
 
+/* making the slides opaque when active */
 .slide[data-active] {
     opacity: 1;
     z-index: 1;
     transition-delay: 0ms;
 }
 
+/* setting the buttons for the carousel */
 .carousel-button {
     position: absolute;
     z-index: 2;
@@ -123,10 +134,6 @@ h4 {
     padding: 0 0.5rem;
 }
 
-.carousel-button:focus {
-    outline: 1px solid black;
-}
-
 .carousel-button.prev {
     left: 1rem;
 }
@@ -135,7 +142,7 @@ h4 {
     right: 1rem;
 }
 
-
+/* css animation keyframes for fading from bottom */
 @keyframes fade-bottom {
     0% {
       transform: translateY(50px);
@@ -147,12 +154,13 @@ h4 {
     }
 }
 
+/* hide */
 [data-tab-content]
 {
-    /*hide */
     display: none;
 }
 
+/* show */
 .active[data-tab-content]
 {
     display: block;
@@ -173,28 +181,32 @@ body::-webkit-scrollbar-thumb {
 /* #endregion */
 
 
+/* #region adaptive */
 /* For PC (only pc should have hover)*/
 @media screen and (min-width: 800px) {
     :root {
         font-size: 1.5rem;
     }
 
-    /* #region adaptive */
     @keyframes link-text-anim {
         0% {color: var(--color-navbar);}
         99% {color: var(--color-navbar);}
         100% {color: var(--color-primary);}
     }
 
+    /* moving the main content to the right as
+    navbar is on the left */
     main {
         margin-left: 8rem;
     }
 
+    /* setting the default width and max width of images */
     .images {
         width: 20rem;
-        max-width: 290px;
+        max-width: 350px;
     }
 
+    /* navbar moved to the left instead of top */
     .navbar {
         width: 6rem;
         height: 100vh;
@@ -238,6 +250,7 @@ body::-webkit-scrollbar-thumb {
         text-decoration: none;
     }
     
+    /* making text invisible until hovered on */
     .link-text {
         display:none;
         margin-left: 1rem;
@@ -266,6 +279,11 @@ body::-webkit-scrollbar-thumb {
     .carousel-button:focus {
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* setting a border for the carousel to make it more obvious */
+    .carousel-button:focus {
+        outline: 1px solid black;
     }
 }
   
@@ -323,6 +341,7 @@ body::-webkit-scrollbar-thumb {
         text-decoration: none;
     }
 
+    /* text made visible from the start as there is no hover for mobile */
     .link-text {
         display: block;
         margin-top: 0.5rem 0 0 0;
@@ -340,6 +359,7 @@ body::-webkit-scrollbar-thumb {
         min-width: 230px;
     }
 
+    /* carousel button made visible from the start as there is no hover for mobile */
     .carousel-button {
         color: white;
         background-color: rgba(0, 0, 0, 0.3);
